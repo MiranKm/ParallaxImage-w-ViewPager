@@ -17,9 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="center"
-                android:src="@drawable/wide_wallpaper"
-        />
-
+                android:src="@drawable/wide_wallpaper"/>
     </HorizontalScrollView>
 
     <android.support.v4.view.ViewPager
@@ -28,5 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:overScrollMode="never" />
+
 
 </FrameLayout>

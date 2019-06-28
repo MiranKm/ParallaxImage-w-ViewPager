@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), ViewPager.PageTransformer, ViewPager.O
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         mPager = findViewById(R.id.viewpager)
 
         mPager.addOnPageChangeListener(this)

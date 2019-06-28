@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#353434"
+        tools:context=".DesignActivity">
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:elevation="0.2dp"
+            android:outlineSpotShadowColor="#0000"
+            android:outlineAmbientShadowColor="#0000"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#fff">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Playing"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:id="@+id/toolbar_title"/>
+        <ImageButton
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="16dp"
+                android:textColor="#000"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                android:tint="#000"/>
+        <ImageButton
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="#000"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_more_horiz_black_24dp"
+                android:tint="#000"/>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout android:orientation="vertical"
+                  android:id="@+id/ln"
+                  android:elevation="0.1dp"
+                  android:layout_alignParentBottom="true"
+                  android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:layout_weight="7"
+                android:background="#fff"
+                android:elevation="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_marginTop="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/cover"
+                        app:riv_corner_radius="30dp"
+                        android:elevation="16dp"
+                        android:src="@drawable/killshot_cover"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"/>
+
+
+                <TextView android:id="@+id/song_title" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Kill Shot"
+                          android:textSize="22sp"
+                          android:textColor="#000"
+                          android:layout_marginTop="50dp"
+                          android:layout_marginLeft="60dp"
+                          android:layout_below="@id/cover"/>
+                <TextView android:id="@+id/des" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Kill Shot"
+                          android:textSize="16sp"
+                          android:textColor="#757575"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="60dp"
+                          android:layout_below="@id/song_title"/>
+                <ProgressBar
+                        android:layout_marginLeft="60dp"
+                        android:layout_below="@+id/des"
+                        android:background="#FF5722"
+                        android:maxWidth="10dp"
+                        android:minWidth="200dp"
+                        android:layout_marginTop="10dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:id="@+id/progressBar"/>
+
+
+                <android.support.design.widget.FloatingActionButton
+                        android:layout_alignRight="@id/song_title"
+                        android:layout_below="@id/cover"
+                        android:layout_marginRight="60dp"
+                        android:id="@+id/fab"
+                        android:layout_marginTop="60dp"
+                        app:rippleColor="#fff"
+                        android:backgroundTint="#FF5722"
+                        android:src="@drawable/ic_play_arrow_black_24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:layout_width="match_parent">
+
+            <ImageButton android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:background="#0000"
+                         android:backgroundTint="#ccc"
+                         android:src="@drawable/ic_skip_next_black_24dp"
+                         android:layout_height="wrap_content"/>
+            <ImageButton android:layout_width="0dp"
+                         android:layout_weight="1"                         android:background="#0000"
+                         android:src="@drawable/heart_shape"
+                         android:layout_height="wrap_content"/>
+            <ImageButton android:layout_width="0dp"
+                         android:layout_weight="1"                          android:background="#0000"
+                         android:src="@drawable/ic_message_black_24dp"
+                         android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

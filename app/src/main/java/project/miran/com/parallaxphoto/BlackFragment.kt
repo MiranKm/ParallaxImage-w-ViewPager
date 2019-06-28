@@ -1,11 +1,14 @@
 package project.miran.com.parallaxphoto
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_black.*
+import kotlinx.android.synthetic.main.fragment_black.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,7 +40,12 @@ class BlackFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_black, container, false)
+        val view=inflater.inflate(R.layout.fragment_black, container, false)
+
+        view.goo.setOnClickListener{
+            context!!.startActivity(Intent(context, DesignActivity::class.java))
+        }
+        return view
     }
 
 
