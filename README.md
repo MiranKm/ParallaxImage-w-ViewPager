@@ -8,8 +8,9 @@ simple parallax effet for background photo with viewpager
 
 the project also has this design it
 
-#Music Player
-![Example](Screenshot_1561733550.png =250x)
+# Music Player
+
+<img src="Screenshot_1561733550.png" alt="alt text" width="300px" >
 
 
 
